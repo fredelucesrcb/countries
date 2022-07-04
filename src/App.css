@@ -46,3 +46,13 @@
   gap: 20px;
   margin:auto;
 }
+
+#country_details_column{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#countries_list{
+  width: 20%;
+}

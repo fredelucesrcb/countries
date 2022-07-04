@@ -1,5 +1,6 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import ReactPaginate from 'react-paginate';
+import React, { useEffect, useState } from 'react';
+
 
 function CountryList(props) {
     const {countries, handleCountrySelection} = props
@@ -20,8 +21,6 @@ function CountryList(props) {
                 }
         </div>
         
-
-
     )
 }
 

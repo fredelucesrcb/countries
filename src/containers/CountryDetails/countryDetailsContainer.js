@@ -2,7 +2,7 @@
 
 function CountryDetails(props) {
     const {coatOfArms, population, capital, continents, name, currencies} = props  
-    let currencyArr = Object.keys(currencies)
+    let currencyArr = currencies ? Object.keys(currencies) : null;
     return (
         <div>
             <h1>
@@ -17,11 +17,12 @@ function CountryDetails(props) {
                     </div>
                     <div className="currency">
                         {
+                            currencyArr ? 
                             currencyArr.map((currency) => 
                                 <span>
                                     {`${currencies[currency].name}(${currencies[currency].symbol})`}
                                 </span>
-                            )                      
+                            ) : ''
                         }    
                     </div>
                     <div className="coat_of_arms">
