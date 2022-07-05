@@ -1,7 +1,6 @@
 import './styles.css'
 import { Avatar, Box, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Skeleton, Stack } from "@mui/material";
-import ImageIcon from '@mui/icons-material/Image';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import ListAltIcon from '@mui/icons-material/ListAlt';import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import PeopleAltTwoToneIcon from '@mui/icons-material/PeopleAltTwoTone';
 import LocationCityTwoToneIcon from '@mui/icons-material/LocationCityTwoTone';
 import PublicTwoToneIcon from '@mui/icons-material/PublicTwoTone';
@@ -10,6 +9,8 @@ import PublicTwoToneIcon from '@mui/icons-material/PublicTwoTone';
 function CountryDetails(props) {
     const {coatOfArms, population, capital, continents, name, currencies, countryLoading} = props  
     let currencyArr = currencies ? Object.keys(currencies) : null;
+
+    console.log(coatOfArms)
 
     function getCurrencies(currencyArray){
         return currencyArray.map((currency, index) =>{ 
@@ -62,7 +63,7 @@ function CountryDetails(props) {
                             height: 100,
                             width: 100,
                           }}
-                        src={ coatOfArms ? coatOfArms.png : ''}
+                        src={ coatOfArms && Object.keys(coatOfArms).length > 0 ? coatOfArms.png : 'https://via.placeholder.com/80x80.png?text=Coatf+of+arms+unavailable'}
                     >
                     </Box>
                 </Grid>
@@ -76,7 +77,7 @@ function CountryDetails(props) {
                                     <ListItem>
                                         <ListItemAvatar>
                                             <Avatar>
-                                                <ImageIcon />
+                                                <ListAltIcon />
                                             </Avatar>
                                         </ListItemAvatar>
                                         <ListItemText primary="Offical name" secondary={name.official}/>   
