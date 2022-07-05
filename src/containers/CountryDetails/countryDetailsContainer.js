@@ -14,7 +14,7 @@ function CountryDetails(props) {
     function getCurrencies(currencyArray){
         return currencyArray.map((currency, index) =>{ 
             let text = ''
-            return text += `${currencies[currency].name}(${currencies[currency].symbol}) ${currencyArr[index+1] ? ', ' : ''} `}
+            return text += `${currencies[currency].name}(${currencies[currency].symbol})${currencyArr[index+1] ? ', ' : ''}`}
     )
     }
     function getContinents(continents) {
