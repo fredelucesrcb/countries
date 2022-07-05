@@ -36,7 +36,7 @@ function CountryDetails(props) {
                 >
                     <Grid item sm={2} id="coat_of_arms_container">
                         <Box>
-                            <Skeleton variant="circular" width={40} height={40} />
+                            <Skeleton variant="circular" width={80} height={80} />
                         </Box>
                     </Grid>
                     <Divider orientation="vertical" variant="middle" flexItem />
