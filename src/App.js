@@ -46,7 +46,6 @@ function App() {
   }
 
   function handlePaginate(event, number) {
-    // console.log(event, number)
     setCurrentPage(number);
   }
 
