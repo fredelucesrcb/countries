@@ -48,11 +48,19 @@
 }
 
 #country_details_column{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 #countries_list{
   width: 20%;
+  height: 100%;
+}
+
+#main_details{
+  width: 100%;
+}
+
+#secondary_details{
+  height: 30%;
+  width: 100% !important;
 }

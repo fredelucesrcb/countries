@@ -1,0 +1,5 @@
+#coat_of_arms_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

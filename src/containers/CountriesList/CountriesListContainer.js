@@ -1,9 +1,10 @@
 import ReactPaginate from 'react-paginate';
 import React, { useEffect, useState } from 'react';
-
+import Skeleton from '@mui/material/Skeleton';
+import { Stack } from '@mui/material';
 
 function CountryList(props) {
-    const {countries, handleCountrySelection} = props
+    const {countries, handleCountrySelection, loading} = props
     
     return(
         <div>
@@ -11,13 +12,22 @@ function CountryList(props) {
                 Countries List
             </h1>
                 {
+                    !loading ?
                     countries !== null ? countries.map((country) => {
                         return(
-                            <div onClick={ (e) => handleCountrySelection(country.name.common)}>
+                            <div onClick={ (e) => handleCountrySelection(country.name.common)} style={{cursor:"pointer"}}>
                                 {country.name.common}
                             </div>
                         )
                     }) : ''
+                    :
+                    <Stack spacing={2} sx={{width: '70%', margin: 'auto'}}>
+                        <Skeleton variant="text" width={'100%'}/>
+                        <Skeleton variant="text" width={'100%'}/>
+                        <Skeleton variant="text" width={'100%'}/>
+                    </Stack>
+                    
+
                 }
         </div>
         
