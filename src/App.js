@@ -69,6 +69,7 @@ function App() {
               countries = {currentCountries}
               handleCountrySelection = {handleCountrySelection}
               loading = {loadingCountryList}
+              currentCountry = {country}
               />  
               <PaginationComponent
                 itemsPerPage = {countriesPerPage}

@@ -4,8 +4,11 @@ import Skeleton from '@mui/material/Skeleton';
 import { Stack } from '@mui/material';
 
 function CountryList(props) {
-    const {countries, handleCountrySelection, loading} = props
-    
+    const {countries, handleCountrySelection, loading, currentCountry} = props
+
+    function setChosen(name) {
+        return currentCountry === name ? 'red' : ''
+    }
     return(
         <div>
             <h1>
@@ -15,7 +18,7 @@ function CountryList(props) {
                     !loading ?
                     countries !== null ? countries.map((country) => {
                         return(
-                            <div onClick={ (e) => handleCountrySelection(country.name.common)} style={{cursor:"pointer"}}>
+                            <div onClick={ (e) => handleCountrySelection(country.name.common)} style={{cursor:"pointer", color: setChosen(country.name.common) }}>
                                 {country.name.common}
                             </div>
                         )
