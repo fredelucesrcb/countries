@@ -64,3 +64,11 @@
   height: 30%;
   width: 100% !important;
 }
+
+.side_panel{
+  flex: 1;
+}
+
+#right_panel{
+  display: flex;
+}

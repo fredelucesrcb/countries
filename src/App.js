@@ -82,7 +82,7 @@ function App() {
           
         </Grid>        
 
-        <Grid item sm={9}>
+        <Grid item sm={9} id="right_panel">
           <Stack
               direction="column"
               justifyContent="space-evenly"
@@ -92,6 +92,7 @@ function App() {
             >
               <Paper elevation={2}
               id='main_details'
+              className="side_panel"
               >
                 <CountriesContainer
                 name = {countryDetails ? countryDetails.name : null}
@@ -102,6 +103,7 @@ function App() {
               
               <Paper elevation={3}
               id='secondary_details'
+              className="side_panel"
               >
                 <CountryDetails
                 coatOfArms = {countryDetails ? countryDetails.coatOfArms : null}
