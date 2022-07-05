@@ -10,8 +10,6 @@ function CountryDetails(props) {
     const {coatOfArms, population, capital, continents, name, currencies, countryLoading} = props  
     let currencyArr = currencies ? Object.keys(currencies) : null;
 
-    console.log(coatOfArms)
-
     function getCurrencies(currencyArray){
         return currencyArray.map((currency, index) =>{ 
             let text = ''
