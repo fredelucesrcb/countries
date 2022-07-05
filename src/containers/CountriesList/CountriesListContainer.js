@@ -1,5 +1,4 @@
-import ReactPaginate from 'react-paginate';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import { Stack } from '@mui/material';
 

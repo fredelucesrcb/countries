@@ -59,12 +59,13 @@ function App() {
         Countries
       </h1>
       <Container maxWidth="l">
-      <Grid container spacing={2}>
+      <Grid container spacing={1.5}>
 
-        <Grid item sm={3} id='countries_list'>
+        <Grid item sm={12} md={2}  id='countries_list'>
           <Stack
+            className='panel_container'
           >
-            <Paper elevation={3}>
+            <Paper elevation={3} className="side_panel">
               <CountryList 
               countries = {currentCountries}
               handleCountrySelection = {handleCountrySelection}
@@ -79,16 +80,16 @@ function App() {
               />
             </Paper>
           </Stack>
-          
         </Grid>        
 
-        <Grid item sm={9} id="right_panel">
+        <Grid item sm={12} md={10}  id="right_panel">
           <Stack
               direction="column"
               justifyContent="space-evenly"
               alignItems="flex-start"
               spacing={1.5}
               id={'country_details_column'}
+              className='panel_container'
             >
               <Paper elevation={2}
               id='main_details'

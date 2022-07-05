@@ -33,13 +33,13 @@ function CountryDetails(props) {
                     container 
                     spacing={1} 
                 >
-                    <Grid item sm={2} id="coat_of_arms_container">
+                    <Grid item sm={12} md={2} id="coat_of_arms_container">
                         <Box>
                             <Skeleton variant="circular" width={80} height={80} />
                         </Box>
                     </Grid>
                     <Divider orientation="vertical" variant="middle" flexItem />
-                    <Grid item sm={9}>
+                    <Grid item sm={12} md={9}>
                         <Stack spacing={2} sx={{width: '70%', margin: 'auto'}}>
                             <Skeleton variant="text" width={'100%'}/>
                             <Skeleton variant="text" width={'100%'}/>
@@ -54,7 +54,7 @@ function CountryDetails(props) {
                     container 
                     spacing={1} 
                 >
-                <Grid item sm={2} id="coat_of_arms_container">
+                <Grid item sm={12} md={2} id="coat_of_arms_container">
                     <Box
                         component="img"
                         sx={{
@@ -66,7 +66,7 @@ function CountryDetails(props) {
                     </Box>
                 </Grid>
                 <Divider orientation="vertical" variant="middle" flexItem />
-                <Grid item sm={9}>
+                <Grid item sm={12} md={9}>
                     {
                         coatOfArms !== null ? 
                         <Grid container spacing={0.5}>

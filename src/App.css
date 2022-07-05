@@ -47,13 +47,13 @@
   margin:auto;
 }
 
-#country_details_column{
+.panel_container{
   width: 100%;
 }
 
 #countries_list{
-  width: 20%;
-  height: 100%;
+  display: flex;
+  width: 100%;
 }
 
 #main_details{
@@ -67,6 +67,7 @@
 
 .side_panel{
   flex: 1;
+  width: 100%;
 }
 
 #right_panel{
