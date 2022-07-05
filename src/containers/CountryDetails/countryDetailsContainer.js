@@ -12,7 +12,6 @@ function CountryDetails(props) {
     let currencyArr = currencies ? Object.keys(currencies) : null;
 
     function getCurrencies(currencyArray){
-        console.log(currencyArray)
         return currencyArray.map((currency, index) =>{ 
             let text = ''
             return text += `${currencies[currency].name}(${currencies[currency].symbol}) ${currencyArr[index+1] ? ', ' : ''} `}
